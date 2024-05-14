@@ -4,9 +4,10 @@ return {
 		tag = "0.1.6",
 		dependencies = {
 			"nvim-lua/plenary.nvim",
+			"xiyaowong/telescope-emoji.nvim",
 
-			"ghassan0/telescope-glyph.nvim",
-      "xiyaowong/telescope-emoji.nvim",
+			"stevearc/dressing.nvim",
+			"2kabhishek/nerdy.nvim",
 		},
 		config = function()
 			local builtin = require("telescope.builtin")
@@ -16,8 +17,8 @@ return {
 			vim.keymap.set("n", "<leader>h", builtin.help_tags, {})
 
 			local telescope = require("telescope")
-			telescope.load_extension("glyph")
 			telescope.load_extension("emoji")
+			telescope.load_extension("nerdy")
 		end,
 	},
 	{
