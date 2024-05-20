@@ -1,4 +1,4 @@
-return
+return {
   {
     "kdheepak/lazygit.nvim",
     cmd = {
@@ -15,7 +15,24 @@ return
     -- setting the keybinding for LazyGit with 'keys' is recommended in
     -- order to load the plugin when the command is run for the first time
     keys = {
-      { "<leader>g", "<cmd>LazyGit<cr>", desc = "LazyGit" }
-    }
-  }
-
+      { "<leader>g", "<cmd>LazyGit<cr>", desc = "LazyGit" },
+    },
+  },
+  {
+    "lewis6991/gitsigns.nvim",
+    config = function()
+      require("gitsigns").setup()
+    end,
+  },
+  {
+    "lewis6991/satellite.nvim",
+    config = function()
+      require("satellite").setup({
+        winblend = 0,
+        excluded_filetypes = {
+          "neo-tree"
+        }
+      })
+    end,
+  },
+}
