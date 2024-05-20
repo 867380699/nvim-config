@@ -31,5 +31,9 @@ return {
 		-- Extend f, F, t, T to work on multiple lines
 		-- Repeat jump by pressing f, F, t, T again.
 		require("mini.jump").setup()
+
+		-- ga/gA to start
+		-- s:split j:justify m:merge
+    require('mini.align').setup()
 	end,
 }
