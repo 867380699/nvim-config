@@ -1,14 +1,14 @@
 local function nmap(k, v)
-	vim.keymap.set("n", k, v, { silent = true })
+  vim.keymap.set("n", k, v, { silent = true })
 end
 
 local function imap(k, v)
-	vim.keymap.set("i", k, v, { silent = true })
+  vim.keymap.set("i", k, v, { silent = true })
 end
 
 nmap("<ESC>", function()
-	vim.cmd.nohlsearch()
-	vim.cmd.echo()
+  vim.cmd.nohlsearch()
+  vim.cmd.echo()
 end)
 
 imap("<C-A>", "<C-O>^")

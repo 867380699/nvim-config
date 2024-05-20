@@ -30,8 +30,8 @@ return {
       require("satellite").setup({
         winblend = 0,
         excluded_filetypes = {
-          "neo-tree"
-        }
+          "neo-tree",
+        },
       })
     end,
   },
