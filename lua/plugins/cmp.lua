@@ -1,5 +1,13 @@
 return {
   {
+    "wasden/cmp-flypy.nvim",
+    build = "make",
+    enabled = false, -- crushed on MacOS
+    config = function()
+      require("flypy").setup({})
+    end,
+  },
+  {
     "hrsh7th/nvim-cmp",
     dependencies = {
       "hrsh7th/cmp-buffer",
@@ -43,6 +51,7 @@ return {
           { name = "luasnip" },
           { name = "path" },
           { name = "neorg" },
+          { name = 'flypy' },
         }),
         mapping = cmp.mapping.preset.insert({
           ["<CR>"] = cmp.mapping.confirm({ select = true }),
