@@ -1,9 +1,14 @@
 return {
   {
-    "ggandor/leap.nvim",
-    config = function()
-      require("leap").create_default_mappings() -- s/S to jump2D
-    end,
+    "folke/flash.nvim",
+    event = "VeryLazy",
+    opts = {
+      modes = {
+        search = {
+          enabled = true,
+        },
+      },
+    },
   },
   {
     "lukas-reineke/indent-blankline.nvim",
@@ -59,6 +64,7 @@ return {
     config = function()
       require("barbar").setup({
         animation = false,
+        auto_hide = 1,
         sidebar_filetypes = {
           ["neo-tree"] = true,
         },
