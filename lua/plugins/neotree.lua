@@ -8,6 +8,14 @@ return {
     -- "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
   },
   config = function()
-    vim.keymap.set("n", "<leader>e", ":Neotree toggle<CR>", { silent = true })
+    require("neo-tree").setup({
+      filesystem = {
+        window = {
+          position = "current",
+        },
+      },
+      hijack_netrw_behavior = "open_current",
+    })
+    vim.keymap.set("n", "<leader>e", ":Neotree position=left toggle<CR>", { silent = true })
   end,
 }
