@@ -12,9 +12,15 @@ return {
       filesystem = {
         window = {
           position = "current",
+          mappings = {
+            ["/"] = "noop"
+          },
         },
       },
       hijack_netrw_behavior = "open_current",
+      source_selector = {
+        winbar = true,
+      },
     })
     vim.keymap.set("n", "<leader>e", ":Neotree position=left toggle<CR>", { silent = true })
   end,
